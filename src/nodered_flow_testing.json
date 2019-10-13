@@ -1,0 +1,174 @@
+[
+    {
+        "id": "5f1bc909.19b378",
+        "type": "inject",
+        "z": "30303b2f.ad8b44",
+        "name": "",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "c6416ed.19ebf9"
+            ]
+        ]
+    },
+    {
+        "id": "c6416ed.19ebf9",
+        "type": "mqtt out",
+        "z": "30303b2f.ad8b44",
+        "name": "",
+        "topic": "ledstrip/desk/focusmode",
+        "qos": "",
+        "retain": "",
+        "broker": "4342c680.8a4c38",
+        "x": 590,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ccfe35bd.d74ca8",
+        "type": "mqtt in",
+        "z": "30303b2f.ad8b44",
+        "name": "",
+        "topic": "ledstrip/#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4342c680.8a4c38",
+        "x": 200,
+        "y": 460,
+        "wires": [
+            [
+                "ac0f7305.d697d"
+            ]
+        ]
+    },
+    {
+        "id": "ac0f7305.d697d",
+        "type": "debug",
+        "z": "30303b2f.ad8b44",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 540,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3745f026.894c6",
+        "type": "inject",
+        "z": "30303b2f.ad8b44",
+        "name": "",
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 210,
+        "y": 260,
+        "wires": [
+            [
+                "b0199a24.774298"
+            ]
+        ]
+    },
+    {
+        "id": "b0199a24.774298",
+        "type": "mqtt out",
+        "z": "30303b2f.ad8b44",
+        "name": "",
+        "topic": "ledstrip/desk/gamingmode",
+        "qos": "",
+        "retain": "",
+        "broker": "4342c680.8a4c38",
+        "x": 490,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e5f7f86b.806d68",
+        "type": "inject",
+        "z": "30303b2f.ad8b44",
+        "name": "",
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 210,
+        "y": 320,
+        "wires": [
+            [
+                "ce754ab.c698ab8"
+            ]
+        ]
+    },
+    {
+        "id": "ce754ab.c698ab8",
+        "type": "mqtt out",
+        "z": "30303b2f.ad8b44",
+        "name": "",
+        "topic": "ledstrip/desk/power",
+        "qos": "",
+        "retain": "",
+        "broker": "4342c680.8a4c38",
+        "x": 530,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "40250391.85397c",
+        "type": "inject",
+        "z": "30303b2f.ad8b44",
+        "name": "",
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "ce754ab.c698ab8"
+            ]
+        ]
+    },
+    {
+        "id": "4342c680.8a4c38",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "HASSIOMQTT",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "Node-Red",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]
